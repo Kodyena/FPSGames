@@ -1,0 +1,83 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField />
+    <ui:Foldout text="Camera" name="CameraFoldout">
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <uie:PropertyField binding-path="playerCamera" label="Camera" name="CameraField" />
+        <ui:Toggle label="Enable Control" binding-path="enableCameraControl" />
+        <uie:PropertyField binding-path="cameraHolder" label="Camera Holder" name="CameraHolder" />
+        <uie:EnumField label="Enum" value="Center" binding-path="mouseInversion" name="MouseInversion" />
+        <uie:PropertyField name="Sprite" binding-path="crosshair" />
+        <uie:FloatField label="Sensitivity" value="8" name="Sensitivity" binding-path="sensitivity" />
+        <uie:FloatField label="Rotation Weight" value="42.2" name="rotationWeight" binding-path="rotationWeight" />
+        <uie:FloatField label="Run FOV" value="42.2" binding-path="runFOV" />
+        <uie:FloatField label="Walk FOV" value="42.2" binding-path="walkFOV" />
+        <uie:FloatField label="FOV Transition Speed" value="42.2" binding-path="fovTransitionSpeed" />
+        <uie:FloatField label="Vertical Angle Range" value="42.2" name="VAR" binding-path="verticalAngleRange" />
+        <uie:FloatField label="Standing Height" value="42.2" name="standHeigh" binding-path="standingHeight" />
+        <uie:FloatField label="Crouching Height" value="42.2" name="crouchHeight" binding-path="crouchingHeight" />
+        <ui:Toggle label="Enable Headbob" binding-path="enableHeadbob" />
+        <uie:FloatField label="Headbob Power" value="42.2" binding-path="headbobPower" />
+        <uie:FloatField label="Headbob Rate" value="42.2" binding-path="headbobSpeed" />
+        <uie:FloatField label="Sensitivity" value="8" name="Sensitivity" binding-path="sensitivity" />
+    </ui:Foldout>
+    <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+    <ui:Foldout text="Movement" name="MovementFoldout">
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Ground Movement" display-tooltip-when-elided="true" name="GroundMovement" />
+        <uie:LayerField label="Ground" name="groundMask" focusable="false" binding-path="whatIsGround" />
+        <uie:FloatField label="Step Speed" value="42.2" binding-path="stepSpeed" />
+        <uie:FloatField label="Walk Speed" value="42.2" name="walkSpeed" binding-path="walkingSpeed" />
+        <ui:Toggle label="Can Run" binding-path="canRun" name="canRun" style="left: 0;" />
+        <uie:FloatField label="Run Speed" value="42.2" name="walkSpeed" binding-path="runningSpeed" />
+        <ui:Toggle label="Can Crouch" binding-path="canCrouch" />
+        <uie:FloatField label="Crouching Speed" value="42.2" name="crouchSpeed" binding-path="crouchingSpeed" />
+        <uie:FloatField label="Ground Drag" value="42.2" name="groundDrag" binding-path="groundDrag" />
+        <uie:FloatField label="Gravity" value="42.2" name="gravity" binding-path="gravity" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Jumping" display-tooltip-when-elided="true" name="jumping" style="top: 0;" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Toggle label="Can Jump" binding-path="canJump" />
+        <uie:FloatField label="Jump Power" value="42.2" binding-path="jumpPower" />
+        <uie:FloatField label="Air Control Factor" value="42.2" binding-path="airControlFactor" />
+        <uie:FloatField label="Jump Cooldown" value="42.2" binding-path="jumpCooldown" />
+        <uie:FloatField label="Max Air Speed" value="42.2" binding-path="maxAirSpeed" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Slopes" display-tooltip-when-elided="true" name="jumping" style="top: 0;" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <uie:FloatField label="Slope Limit" value="42.2" binding-path="slopeLimit" />
+        <uie:FloatField label="Slope Speed Multiplier" value="42.2" binding-path="slopeSpeedMultiplier" />
+        <uie:FloatField label="Max Stair Rise" value="42.2" binding-path="maxStairRise" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Grapple" display-tooltip-when-elided="true" name="jumping" style="top: 0;" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Toggle label="Can Grapple" binding-path="canGrapple" />
+        <uie:PropertyField name="GrappleMat" binding-path="grappleMaterial" label="Grapple Material" />
+        <uie:FloatField label="Grapple Reel Force" value="42.2" binding-path="grappleReelForce" />
+        <uie:FloatField label="Grapple Spring Coeff" value="42.2" binding-path="grappleSpringConst" />
+        <uie:FloatField label="Min Grapple Length" value="42.2" binding-path="minGrappleLength" />
+        <uie:FloatField label="Max Grapple Length" value="42.2" binding-path="maxGrappleLength" />
+        <uie:FloatField label="Grapple Speed" value="42.2" binding-path="grappleSpeed" />
+        <uie:PropertyField binding-path="grappleWidthCurve" name="GrappleWidthCurve" label="Grapple Width Curve" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Wall Running " display-tooltip-when-elided="true" name="jumping" style="top: 0;" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <uie:FloatField label="WallRun Speed" value="42.2" binding-path="wallRunSpeed" />
+        <uie:FloatField label="Wallrun Time" value="42.2" binding-path="wallRunTime" />
+        <uie:FloatField label="Max WallRun Distance" value="42.2" binding-path="maxWallRunDistance" />
+        <uie:PropertyField label="WallRun Surface" binding-path="wallRunSurface" />
+        <uie:FloatField label="Min Wallrun Height" value="42.2" binding-path="minWallrunHeight" />
+        <uie:PropertyField binding-path="wallrunDecayFactor" />
+        <uie:FloatField label="Camera Rotation" value="42.2" binding-path="tiltAngle" />
+        <uie:FloatField label="Tilt Speed" value="42.2" binding-path="tiltSpeed" />
+        <uie:FloatField label="Horizontal Jump Force" value="42.2" binding-path="horizontalWallJumpForce" />
+        <uie:FloatField label="Vertical Jump Force" value="42.2" binding-path="verticalWallJumpForce" />
+        <uie:ToolbarSpacer style="height: 10px; width: 61px;" />
+        <ui:Label text="Sliding" display-tooltip-when-elided="true" name="jumping" style="top: 0;" />
+        <uie:FloatField label="Slide Length" value="42.2" binding-path="slideTime" />
+        <uie:FloatField label="Slide Speed" value="42.2" binding-path="slideSpeed" />
+        <uie:FloatField label="Downwards Force" value="42.2" binding-path="downSlideForce" />
+        <uie:FloatField label="Min Slide Speed" value="42.2" binding-path="minSlideStartSpeed" />
+        <uie:FloatField label="Slide Stop Speed" value="42.2" binding-path="slideStopSpeed" />
+    </ui:Foldout>
+    <uie:PropertyField binding-path="slideDecayCurve" label="Slide Decay " />
+</ui:UXML>
