@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
-[CustomEditor(typeof(CustomCharacterController))]
+[CustomEditor(typeof(PlayerStateMachine))]
 public class CustomCharacterController_Inspector : Editor
 {
     public VisualTreeAsset m_InspectorXML;
